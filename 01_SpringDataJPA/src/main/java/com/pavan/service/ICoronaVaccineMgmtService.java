@@ -7,4 +7,5 @@ public interface ICoronaVaccineMgmtService {
 	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccines);
 	public Long getVaccineCount();
 	public boolean checkAvailablityByRegNo(Long regNo);
+	public Iterable<CoronaVaccine> fetchAllDetails();
 }
