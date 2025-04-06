@@ -1,5 +1,8 @@
 package com.pavan;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -59,6 +62,10 @@ public class Application {
 		 */
 		
 		
+		// finding multiple corona vacines by passing the multiple ids
+		
+		List<Long> ids = new ArrayList<Long>();
+		serviceImpl.fetchAllDetailsByID(ids);
 		
 		
 		
