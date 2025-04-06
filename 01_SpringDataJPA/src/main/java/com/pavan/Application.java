@@ -100,7 +100,7 @@ public class Application {
 		System.out.println(removeVaccineById + " Vaccine Removed by using the Id");
 		
 		// removing the vaccine by Vaccine object
-		String removeVaccineByObject = serviceImpl.removeVaccineByObject(new CoronaVaccine(null, "sputnik", "russie", "Russia", 567.8, 2));
+		String removeVaccineByObject = serviceImpl.removeVaccineByObject(new CoronaVaccine(5l, "sputnik", "russie", "Russia", 567.8, 2));
 		System.out.println(removeVaccineByObject + " Vaccine Removed By using the Vaccine Object");
 		
 		//remove the Vaccine by Ids
