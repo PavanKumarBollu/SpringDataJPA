@@ -27,7 +27,7 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	@Override
 	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccines) {
-		if(vaccines != null)
+		if (vaccines != null)
 			return repo.saveAll(vaccines);
 		else
 			throw new IllegalArgumentException("Batch Registration is Failed");
@@ -36,6 +36,12 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public Long getVaccineCount() {
 		return repo.count();
+	}
+
+	@Override
+	public boolean checkAvailablityByRegNo(Long regNo) {
+		return repo.existsById(regNo);
+
 	}
 
 }
