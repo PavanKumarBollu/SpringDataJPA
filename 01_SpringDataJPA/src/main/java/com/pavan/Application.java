@@ -2,12 +2,14 @@ package com.pavan;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.pavan.bo.CoronaVaccine;
 import com.pavan.service.CoronoVaccineMgmtServiceImpl;
 import com.pavan.service.ICoronaVaccineMgmtService;
 
@@ -76,6 +78,13 @@ public class Application {
 		 */
 		
 		
+		// finding single vaccine by using the id
+		
+		Optional<CoronaVaccine> fetchVaccineById = serviceImpl.fetchVaccineById(2l);
+		if(fetchVaccineById.isPresent())
+			System.out.println(fetchVaccineById.get());
+		else
+			throw new IllegalArgumentException("Record not found for the Given Id::");
 		
 		
 		
