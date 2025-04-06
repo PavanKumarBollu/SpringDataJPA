@@ -2,6 +2,7 @@ package com.pavan.bo;
 
 import java.io.Serializable;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -18,7 +19,8 @@ public class Patient implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer PatientId;
+	@Column(name = "PatientId")
+	private Integer patientId;
 	
 	private String patientRegNo;
 	private String firstName;
