@@ -26,7 +26,7 @@ public class Application {
 		
 		
 		
-		((ConfigurableApplicationContext) service).close();
+		((ConfigurableApplicationContext) context).close();
 	}
 
 }
