@@ -26,8 +26,11 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	}
 
 	@Override
-	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccine) {
-		return null;
+	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccines) {
+		if(vaccines != null)
+			return repo.saveAll(vaccines);
+		else
+			throw new IllegalArgumentException("Batch Registration is Failed");
 	}
 
 }
