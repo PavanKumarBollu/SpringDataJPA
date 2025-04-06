@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.pavan.dao.ICoronaVaccineRepo;
 import com.pavan.service.CoronoVaccineMgmtServiceImpl;
 import com.pavan.service.ICoronaVaccineMgmtService;
 
