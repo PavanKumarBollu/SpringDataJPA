@@ -44,4 +44,9 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	}
 
+	@Override
+	public Iterable<CoronaVaccine> fetchAllDetails() {
+		return repo.findAll();
+	}
+
 }

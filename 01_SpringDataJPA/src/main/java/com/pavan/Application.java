@@ -11,22 +11,21 @@ import com.pavan.service.ICoronaVaccineMgmtService;
 @SpringBootApplication
 public class Application {
 
- 	public static void main(String[] args) {
+	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 		ICoronaVaccineMgmtService serviceImpl = context.getBean(CoronoVaccineMgmtServiceImpl.class);
-		
-		
+
 		// RegisterVacine Method
-		
+
 		/*
 		 * CoronaVaccine vaccine = new CoronaVaccine(null, "covidshield", "serum",
 		 * "IND", 750.0, 2); String vaccineRegistationStatus =
 		 * serviceImpl.registerVacine(vaccine);
 		 * System.out.println(vaccineRegistationStatus);
 		 */
-		
+
 		// RegisterInBatch Method
-		
+
 		/*
 		 * List<CoronaVaccine> vacines = new ArrayList<CoronaVaccine>(); vacines.add(new
 		 * CoronaVaccine(null, "sputnik", "russie", "Russia", 567.8, 2));
@@ -38,18 +37,24 @@ public class Application {
 		 * serviceImpl.registerInBatch(vacines); registerInBatch.forEach(vacine -> {
 		 * System.out.println(vacine.getRegNo()); });
 		 */
-		
-		// total number of Vaccine 
-		
+
+		// total number of Vaccine
+
 		/*
 		 * Long totalCount = serviceImpl.getVaccineCount();
 		 * System.out.println("Total Vaccies Count in the Table is :: " + totalCount);
 		 */
-		
-		
+
 		// Finding Vaccine By Id
+
+		/*
+		 * System.out.println( "Checking The Availability Of Vaccine With Id :: 3 ->  "
+		 * + serviceImpl.checkAvailablityByRegNo(3l));
+		 */
 		
-		System.out.println("Checking The Availability Of Vaccine With Id :: 3 ->  " + serviceImpl.checkAvailablityByRegNo(3l));
+		// Finding all the Vaccines in the Table
+		
+		serviceImpl.fetchAllDetails().forEach(System.out::println);
 		
 		
 		
