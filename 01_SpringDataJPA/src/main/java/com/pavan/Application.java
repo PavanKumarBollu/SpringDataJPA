@@ -8,11 +8,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
+import com.pavan.dao.ICoronaVaccineRepo;
 import com.pavan.service.CoronoVaccineMgmtServiceImpl;
 import com.pavan.service.ICoronaVaccineMgmtService;
 
 @SpringBootApplication
 public class Application {
+
+   
 
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
@@ -65,7 +68,10 @@ public class Application {
 		// finding multiple corona vacines by passing the multiple ids
 		
 		List<Long> ids = new ArrayList<Long>();
-		serviceImpl.fetchAllDetailsByID(ids);
+		serviceImpl.fetchAllDetailsByID(ids).forEach(vaccine -> {
+			System.out.println("vaccine Name : " + vaccine.getName() + " vaccine Price : " + vaccine.getPrice());
+		});
+		
 		
 		
 		
