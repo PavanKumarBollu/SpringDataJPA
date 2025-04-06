@@ -1,6 +1,7 @@
 package com.pavan.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.pavan.bo.CoronaVaccine;
 
@@ -11,4 +12,5 @@ public interface ICoronaVaccineMgmtService {
 	public boolean checkAvailablityByRegNo(Long regNo);
 	public Iterable<CoronaVaccine> fetchAllDetails();
 	public Iterable<CoronaVaccine> fetchAllDetailsByID(List<Long> ids);
+	public Optional<CoronaVaccine> fetchVaccineById(Long id);
 }

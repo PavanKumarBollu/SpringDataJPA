@@ -66,14 +66,14 @@ public class Application {
 		
 		// finding multiple corona vacines by passing the multiple ids
 		
-		List<Long> ids = new ArrayList<Long>();
-		ids.add(2l);
-		ids.add(1l);
-		ids.add(3l);
-		
-		serviceImpl.fetchAllDetailsByID(ids).forEach(vaccine -> {
-			System.out.println("vaccine Name : " + vaccine.getName() + " vaccine Price : " + vaccine.getPrice());
-		});
+		/*
+		 * List<Long> ids = new ArrayList<Long>(); ids.add(2l); ids.add(1l);
+		 * ids.add(3l);
+		 * 
+		 * serviceImpl.fetchAllDetailsByID(ids).forEach(vaccine -> {
+		 * System.out.println("vaccine Name : " + vaccine.getName() +
+		 * " vaccine Price : " + vaccine.getPrice()); });
+		 */
 		
 		
 		
