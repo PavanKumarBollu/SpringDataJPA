@@ -1,5 +1,7 @@
 package com.pavan.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -47,6 +49,11 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public Iterable<CoronaVaccine> fetchAllDetails() {
 		return repo.findAll();
+	}
+
+	@Override
+	public Iterable<CoronaVaccine> fetchAllDetailsByID(List<Long> ids) {
+		return repo.findAllById(ids);
 	}
 
 }

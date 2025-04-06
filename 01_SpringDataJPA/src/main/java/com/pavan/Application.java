@@ -54,7 +54,9 @@ public class Application {
 		
 		// Finding all the Vaccines in the Table
 		
-		serviceImpl.fetchAllDetails().forEach(System.out::println);
+		/*
+		 * serviceImpl.fetchAllDetails().forEach(System.out::println);
+		 */
 		
 		
 		
