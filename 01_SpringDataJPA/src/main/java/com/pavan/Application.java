@@ -2,7 +2,6 @@ package com.pavan;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -97,12 +96,19 @@ public class Application {
 		 */
 		
 		// Removing the vaccine by id
-		serviceImpl.removeVaccineById(null);
+		String removeVaccineById = serviceImpl.removeVaccineById(4l);
+		System.out.println(removeVaccineById + " Vaccine Removed by using the Id");
+		
 		// removing the vaccine by Vaccine object
-		serviceImpl.removeVaccineByObject(null);
+		String removeVaccineByObject = serviceImpl.removeVaccineByObject(new CoronaVaccine(null, "sputnik", "russie", "Russia", 567.8, 2));
+		System.out.println(removeVaccineByObject + " Vaccine Removed By using the Vaccine Object");
 		
 		//remove the Vaccine by Ids
-		serviceImpl.removeVaccinesByIds(null);
+		List<Long> vaccineIds = new ArrayList<Long>();
+		vaccineIds.add(6l);
+		vaccineIds.add(7l);
+		String removeVaccinesByIds = serviceImpl.removeVaccinesByIds(vaccineIds);
+		System.out.println(removeVaccinesByIds + " Objects are removed by using the IdS");
 		
 		
 		
