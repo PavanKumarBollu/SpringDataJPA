@@ -96,6 +96,16 @@ public class Application {
 		 * 
 		 */
 		
+		// Removing the vaccine by id
+		serviceImpl.removeVaccineById(null);
+		// removing the vaccine by Vaccine object
+		serviceImpl.removeVaccineByObject(null);
+		
+		//remove the Vaccine by Ids
+		serviceImpl.removeVaccinesByIds(null);
+		
+		
+		
 		
 		((ConfigurableApplicationContext) context).close();
 	}

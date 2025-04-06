@@ -87,7 +87,14 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	@Override
 	public String removeVaccinesByIds(List<Long> ids) {
-		return null;
+		@SuppressWarnings("unchecked")
+		List<CoronaVaccine> iterable =(List<CoronaVaccine>) repo.findAllById(ids);
+		if(iterable.size() == ids.size()) {
+			repo.deleteAllById(ids);
+			return ids.size() + " no of ids are deleted....";
+		}
+		return "Problem in deleting records";
+		
 	}
 
 }
