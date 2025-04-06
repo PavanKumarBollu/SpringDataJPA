@@ -31,15 +31,23 @@ public class Application {
 		
 		// RegisterInBatch Method
 		
-		List<CoronaVaccine> vacines = new ArrayList<CoronaVaccine>();
-		vacines.add(new CoronaVaccine(null, "sputnik", "russie", "Russia", 567.8, 2));
-		vacines.add(new CoronaVaccine(null, "pyzer", "pyzwer", "USA", 678.8,  2));
-		vacines.add(new CoronaVaccine(null, "moderena", "moderena", "USA", 455.8, 2));
+		/*
+		 * List<CoronaVaccine> vacines = new ArrayList<CoronaVaccine>(); vacines.add(new
+		 * CoronaVaccine(null, "sputnik", "russie", "Russia", 567.8, 2));
+		 * vacines.add(new CoronaVaccine(null, "pyzer", "pyzwer", "USA", 678.8, 2));
+		 * vacines.add(new CoronaVaccine(null, "moderena", "moderena", "USA", 455.8,
+		 * 2));
+		 * 
+		 * Iterable<CoronaVaccine> registerInBatch =
+		 * serviceImpl.registerInBatch(vacines); registerInBatch.forEach(vacine -> {
+		 * System.out.println(vacine.getRegNo()); });
+		 */
 		
-		Iterable<CoronaVaccine> registerInBatch = serviceImpl.registerInBatch(vacines);
-		registerInBatch.forEach(vacine -> {
-			System.out.println(vacine.getRegNo());
-		});
+		// total number of Vaccine 
+		
+		Long count = serviceImpl.getVaccineCount();
+		
+		
 		
 		
 		

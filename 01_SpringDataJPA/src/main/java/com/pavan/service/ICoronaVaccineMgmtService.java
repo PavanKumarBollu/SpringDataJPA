@@ -5,4 +5,5 @@ import com.pavan.bo.CoronaVaccine;
 public interface ICoronaVaccineMgmtService {
 	public String registerVacine(CoronaVaccine vaccine);
 	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccines);
+	public Long getVaccineCount();
 }

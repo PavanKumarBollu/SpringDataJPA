@@ -33,4 +33,9 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 			throw new IllegalArgumentException("Batch Registration is Failed");
 	}
 
+	@Override
+	public Long getVaccineCount() {
+		return repo.count();
+	}
+
 }
