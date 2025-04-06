@@ -22,17 +22,40 @@ public class Patient implements Serializable{
 	@Column(name = "PatientId")
 	private Integer patientId;
 	
+	@Column(name="PatientRegNo")
 	private String patientRegNo;
+	
+	@Column(name="PatientRegNo")
 	private String firstName;
+	
+	@Column(name="PatientRegNo")
 	private String lastName;
+	
+	@Column(name="PatientRegNo")
 	private String dateOfBirth;
+	
+	@Column(name="PatientRegNo")
 	private String gender;
+	
+	@Column(name="PatientRegNo")
 	private String phoneNumber;
+	
+	@Column(name="PatientRegNo")
 	private String emailId;
+	
+	@Column(name="PatientRegNo")
 	private String height;
+	
+	@Column(name="PatientRegNo")
 	private String weight;
+	
+	@Column(name="PatientRegNo")
 	private String bloodGroup;
+	
+	@Column(name="PatientRegNo")
 	private String createdOn;
+	
+	@Column(name="PatientRegNo")
 	private String modifiedOn;
 	
 	
