@@ -18,7 +18,10 @@ public class Application {
 		
 		
 		CoronaVaccine vaccine = new CoronaVaccine(null, "covidshield", "serum", "IND", 750.0, 2);
-		serviceImpl.registerVacine(vaccine);
+		String vaccineRegistationStatus = serviceImpl.registerVacine(vaccine);
+		System.out.println(vaccineRegistationStatus);
+		
+		
 		
 		
 		
