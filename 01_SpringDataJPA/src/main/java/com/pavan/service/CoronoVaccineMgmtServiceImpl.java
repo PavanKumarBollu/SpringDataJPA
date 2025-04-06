@@ -25,4 +25,9 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	}
 
+	@Override
+	public Iterable<CoronaVaccine> registerInBatch(Iterable<CoronaVaccine> vaccine) {
+		return null;
+	}
+
 }
