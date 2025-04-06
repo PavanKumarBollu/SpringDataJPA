@@ -62,4 +62,22 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		return repo.findById(id);
 	}
 
+	@Override
+	public String removeVaccineById(Long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String removeVaccineByObject(CoronaVaccine vacine) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String removeVaccinesByIds(List<Long> ids) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
