@@ -15,7 +15,6 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	
 	@Override
 	public Iterable<CoronaVaccine> fetchDetails(boolean asc, String... properties) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
