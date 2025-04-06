@@ -1,5 +1,7 @@
 package com.pavan.service;
 
-public interface ICoronaVaccineMgmtService {
+import com.pavan.bo.CoronaVaccine;
 
+public interface ICoronaVaccineMgmtService {
+	public Iterable<CoronaVaccine> fetchDetails(boolean asc, String... properties);
 }
