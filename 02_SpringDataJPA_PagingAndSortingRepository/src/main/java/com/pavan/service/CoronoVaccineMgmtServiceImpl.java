@@ -18,4 +18,18 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		return null;
 	}
 
+
+	@Override
+	public Iterable<CoronaVaccine> fetchDetailsByPageNo(int pageNo, int pageSize, boolean asc, String... properties) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public void fetchDetailsByPagination(int pageSize) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
