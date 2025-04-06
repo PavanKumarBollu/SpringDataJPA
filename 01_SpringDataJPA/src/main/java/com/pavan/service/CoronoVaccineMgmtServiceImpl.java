@@ -64,12 +64,25 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	@Override
 	public String removeVaccineById(Long id) {
-		return null;
+		Optional<CoronaVaccine> vaccine = repo.findById(id);
+		if(vaccine.isPresent())
+		{		
+			repo.deleteById(id);;
+			return "record deleted having id:: " + id;
+		}
+		else
+			return "record not avaialble for deletion with the id ::" + id;
 	}
 
 	@Override
 	public String removeVaccineByObject(CoronaVaccine vacine) {
-		return null;
+		Optional<CoronaVaccine> optional = repo.findById(vacine.getRegNo());
+		if(optional.isPresent())
+		{
+			repo.delete(vacine);
+			return "Record deleted with the given id:: " + vacine.getRegNo();
+		}
+		return "Record not available for deletion with the given id :: " + vacine.getRegNo();
 	}
 
 	@Override

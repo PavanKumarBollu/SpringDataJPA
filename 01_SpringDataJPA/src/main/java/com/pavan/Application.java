@@ -44,6 +44,7 @@ public class Application {
 		 * serviceImpl.registerInBatch(vacines); registerInBatch.forEach(vacine -> {
 		 * System.out.println(vacine.getRegNo()); });
 		 */
+		 
 
 		// total number of Vaccine
 
@@ -80,20 +81,20 @@ public class Application {
 		
 		// finding single vaccine by using the id
 		
-		//case:1
-		Optional<CoronaVaccine> fetchVaccineById = serviceImpl.fetchVaccineById(2l);
-		if(fetchVaccineById.isPresent())
-			System.out.println(fetchVaccineById.get());
-		else
-			throw new IllegalArgumentException("Record not found for the Given Id::");
-		//case:2
-		System.out.println(serviceImpl.fetchVaccineById(10l).orElse(new CoronaVaccine()));
-		
-		
-		//case:3
-		System.out.println(serviceImpl.fetchVaccineById(12l).orElseGet(()->new CoronaVaccine()));
-		
-		
+		/*
+		 * //case:1 Optional<CoronaVaccine> fetchVaccineById =
+		 * serviceImpl.fetchVaccineById(2l); if(fetchVaccineById.isPresent())
+		 * System.out.println(fetchVaccineById.get()); else throw new
+		 * IllegalArgumentException("Record not found for the Given Id::"); //case:2
+		 * System.out.println(serviceImpl.fetchVaccineById(10l).orElse(new
+		 * CoronaVaccine()));
+		 * 
+		 * 
+		 * //case:3
+		 * System.out.println(serviceImpl.fetchVaccineById(12l).orElseGet(()->new
+		 * CoronaVaccine()));
+		 * 
+		 */
 		
 		
 		((ConfigurableApplicationContext) context).close();
