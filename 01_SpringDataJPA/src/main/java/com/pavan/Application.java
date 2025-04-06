@@ -1,14 +1,10 @@
 package com.pavan;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 
-import com.pavan.bo.CoronaVaccine;
 import com.pavan.service.CoronoVaccineMgmtServiceImpl;
 import com.pavan.service.ICoronaVaccineMgmtService;
 
@@ -45,7 +41,8 @@ public class Application {
 		
 		// total number of Vaccine 
 		
-		Long count = serviceImpl.getVaccineCount();
+		Long totalCount = serviceImpl.getVaccineCount();
+		System.out.println("Total Vaccies Count in the Table is :: " + totalCount);
 		
 		
 		
