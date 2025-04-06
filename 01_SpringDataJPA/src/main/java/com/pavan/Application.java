@@ -41,10 +41,15 @@ public class Application {
 		
 		// total number of Vaccine 
 		
-		Long totalCount = serviceImpl.getVaccineCount();
-		System.out.println("Total Vaccies Count in the Table is :: " + totalCount);
+		/*
+		 * Long totalCount = serviceImpl.getVaccineCount();
+		 * System.out.println("Total Vaccies Count in the Table is :: " + totalCount);
+		 */
 		
 		
+		// Finding Vaccine By Id
+		
+		System.out.println("Checking The Availability Of Vaccine With Id :: 3 ->  " + serviceImpl.checkAvailablityByRegNo(3l));
 		
 		
 		
