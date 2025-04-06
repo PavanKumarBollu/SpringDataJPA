@@ -15,12 +15,20 @@ public class Application {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(Application.class, args);
 		
-		
 		ICoronaVaccineMgmtService service = context.getBean(CoronoVaccineMgmtServiceImpl.class);
-		Iterable<CoronaVaccine> fetchDetails = service.fetchDetails(true, "price", "name");
-		fetchDetails.forEach(vaccine->{
-			System.out.println( vaccine.getName() + " == " + vaccine.getPrice());
-		});
+		
+		
+		/*
+		 * Iterable<CoronaVaccine> fetchDetails = service.fetchDetails(true, "price",
+		 * "name"); fetchDetails.forEach(vaccine->{ System.out.println(
+		 * vaccine.getName() + " == " + vaccine.getPrice()); });
+		 */
+		
+		
+		/*
+		 *	service.fetchDetailsByPageNo(1, 2, false, "company", "price").forEach(System.out::println);
+		 * 
+		 */
 		
 		
 		

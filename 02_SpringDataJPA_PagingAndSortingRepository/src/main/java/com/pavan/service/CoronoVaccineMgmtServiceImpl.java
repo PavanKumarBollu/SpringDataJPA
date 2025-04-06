@@ -33,6 +33,8 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 
 	@Override
 	public void fetchDetailsByPagination(int pageSize) {
+		
+		
 
 	}
 
