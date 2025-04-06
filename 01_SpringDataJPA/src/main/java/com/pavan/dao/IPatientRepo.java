@@ -2,8 +2,8 @@ package com.pavan.dao;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.pavan.bo.PatientBo;
+import com.pavan.bo.Patient;
 
-public interface IPatientRepo extends CrudRepository<PatientBo, Long> {
+public interface IPatientRepo extends CrudRepository<Patient, Long> {
 
 }
