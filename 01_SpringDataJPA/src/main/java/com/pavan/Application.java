@@ -95,22 +95,27 @@ public class Application {
 		 * 
 		 */
 		
-		// Removing the vaccine by id
-		String removeVaccineById = serviceImpl.removeVaccineById(4l);
-		System.out.println(removeVaccineById + " Vaccine Removed by using the Id");
+		/*
+		 * // Removing the vaccine by id String removeVaccineById =
+		 * serviceImpl.removeVaccineById(3l); System.out.println(removeVaccineById +
+		 * " Vaccine Removed by using the Id");
+		 */
 		
-		// removing the vaccine by Vaccine object
-		String removeVaccineByObject = serviceImpl.removeVaccineByObject(new CoronaVaccine(5l, "sputnik", "russie", "Russia", 567.8, 2));
-		System.out.println(removeVaccineByObject + " Vaccine Removed By using the Vaccine Object");
+		/*
+		 * // removing the vaccine by Vaccine object String removeVaccineByObject =
+		 * serviceImpl.removeVaccineByObject(new CoronaVaccine(5l, "sputnik", "russie",
+		 * "Russia", 567.8, 2)); System.out.println(removeVaccineByObject +
+		 * " Vaccine Removed By using the Vaccine Object");
+		 */
 		
-		//remove the Vaccine by Ids
-		List<Long> vaccineIds = new ArrayList<Long>();
-		vaccineIds.add(6l);
-		vaccineIds.add(7l);
-		String removeVaccinesByIds = serviceImpl.removeVaccinesByIds(vaccineIds);
-		System.out.println(removeVaccinesByIds + " Objects are removed by using the IdS");
-		
-		
+		/*
+		 * //remove the Vaccine by Ids List<Long> vaccineIds = new ArrayList<Long>();
+		 * vaccineIds.add(6l); vaccineIds.add(7l); String removeVaccinesByIds =
+		 * serviceImpl.removeVaccinesByIds(vaccineIds);
+		 * System.out.println(removeVaccinesByIds +
+		 * " Vaccines are removed by using the IdS");
+		 * 
+		 */
 		
 		
 		((ConfigurableApplicationContext) context).close();
