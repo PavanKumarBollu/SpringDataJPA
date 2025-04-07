@@ -21,7 +21,7 @@ public class Application {
 		
 		CoronaVaccine vaccine = new CoronaVaccine();
 		vaccine.setName("Vaxzevria");
-		List<CoronaVaccine> data = service.searchVaccinesByGivenData(vaccine, true, "name", "price");
+		List<CoronaVaccine> data = service.searchVaccinesByGivenData(vaccine, true, "regNo","name", "price");
 		data.forEach(System.out::println);
 		
 		
