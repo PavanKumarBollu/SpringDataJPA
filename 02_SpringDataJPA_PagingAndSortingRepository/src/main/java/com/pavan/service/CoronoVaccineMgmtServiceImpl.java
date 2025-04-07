@@ -52,7 +52,7 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 			Page<CoronaVaccine> pag = repo.findAll(page);
 			
 			pag.getContent().forEach(System.out::println);
-			System.out.println("-------- " + i+1 + " page Of " + pag.getTotalPages());
+			System.out.println("-------- " + (i+1) + " page Of " + pag.getTotalPages());
 		}
 
 	}
