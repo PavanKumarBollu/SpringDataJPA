@@ -30,7 +30,7 @@ public class Application {
 		 * 
 		 */
 		
-		
+		service.fetchDetailsByPagination(5);
 		
 		
 		
