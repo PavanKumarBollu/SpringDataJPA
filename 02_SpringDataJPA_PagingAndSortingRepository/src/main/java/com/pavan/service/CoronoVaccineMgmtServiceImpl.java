@@ -41,6 +41,8 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		// Setting up the total page count based on the number of records
 		
 		Long totalPageCount = totalRows / pageSize;
+		
+		totalPageCount = totalRows % pageSize == 0 ? totalPageCount : ++totalPageCount;
 
 	}
 
