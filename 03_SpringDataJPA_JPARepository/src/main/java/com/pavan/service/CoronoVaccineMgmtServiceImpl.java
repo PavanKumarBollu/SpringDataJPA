@@ -28,4 +28,16 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		return all;
 	}
 
+	@Override
+	public CoronaVaccine getVaccineById(Long regNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String removeVaccinesByRegNo(Iterable<Long> regNo) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
