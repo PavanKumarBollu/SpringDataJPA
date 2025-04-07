@@ -22,22 +22,28 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 			String... properties) {
 
 		Example<CoronaVaccine> example = Example.of(vaccine);
-		Sort sort = Sort.by(ascOrder?Direction.ASC:Direction.DESC, properties);
+		Sort sort = Sort.by(ascOrder ? Direction.ASC : Direction.DESC, properties);
 		List<CoronaVaccine> all = repo.findAll(example, sort);
-		
+
 		return all;
 	}
 
 	@Override
 	public CoronaVaccine getVaccineById(Long regNo) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return repo.getReferenceById(regNo);
 	}
 
 	@Override
 	public String removeVaccinesByRegNo(Iterable<Long> regNo) {
-		// TODO Auto-generated method stub
-		return null;
+		List<CoronaVaccine> list = repo.findAllById(regNo);
+		if(list.size()!=0)
+		{
+			repo.deleteAllByIdInBatch(regNo);
+			return list.size() + " no of records are deleted";
+		}
+		
+		return "records not available to delete";
 	}
 
 }
