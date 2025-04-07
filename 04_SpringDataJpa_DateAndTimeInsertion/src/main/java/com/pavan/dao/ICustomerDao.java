@@ -1,5 +1,9 @@
 package com.pavan.dao;
 
-public interface ICustomerDao {
+import org.springframework.data.repository.CrudRepository;
+
+import com.pavan.bo.Customer;
+
+public interface ICustomerDao extends CrudRepository<Customer, Long>{
 
 }
