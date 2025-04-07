@@ -1,7 +1,7 @@
 
 package com.pavan.service;
 
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,30 +17,32 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	private ICoronaVaccineRepo repo;
 
 	
-
 	@Override
 	public List<CoronaVaccine> fetchVaccineByCompany(String company) {
-		// TODO Auto-generated method stub
-		return null;
+
+		System.out.println(repo.getClass() + " " + Arrays.toString(repo.getClass().getDeclaredMethods()));
+
+		List<CoronaVaccine> listEntities = repo.findByCompany(company);
+		repo.findByCompanyEquals(company).forEach(System.out::println);
+		repo.findByCompanyIs(company).forEach(System.out::println);
+		return listEntities;
 	}
 
 	@Override
 	public List<CoronaVaccine> fetchVaccineByPricesLessThan(Double price) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findByPriceLessThan(price);
 	}
 
 	@Override
 	public List<CoronaVaccine> searchVaccineByCountriesAndPriceRange(List<String> countires, double startRange,
 			double endRange) {
-		// TODO Auto-generated method stub
-		return null;
+
+		return repo.findByCountryInAndPriceBetween(countires, startRange, endRange);
 	}
 
 	@Override
 	public List<CoronaVaccine> fetchVaccineNotByCountry(List<String> countries) {
-		// TODO Auto-generated method stub
-		return null;
+		return repo.findByCountryNotIn(countries);
 	}
 
 }
