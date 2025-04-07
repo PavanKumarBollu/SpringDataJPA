@@ -1,6 +1,9 @@
 package com.pavan.bo;
 
-public class CoronaVaccine {
+import java.io.Serializable;
+
+@Entity
+public class CoronaVaccine implements Serializable {
 	private Long regNo;
 	private String name;
 	private String company;
