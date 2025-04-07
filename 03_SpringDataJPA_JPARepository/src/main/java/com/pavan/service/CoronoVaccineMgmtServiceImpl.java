@@ -20,13 +20,8 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	private ICoronaVaccineRepo repo;
 
 	@Override
-	public List<CoronaVaccine> searchVaccinesByGivenData(CoronaVaccine vaccine, boolean ascOrder,
-			String... properties) {
-		// TODO Auto-generated method stub
+	public List<CoronaVaccine> searchVaccinesByGivenData(CoronaVaccine vaccine, boolean ascOrder,String... properties) {
 		return null;
 	}
-
-	
-	
 
 }
