@@ -17,10 +17,9 @@ public class CustomerMgmtServieImpl implements ICustomerMgmtService {
 	
 	@Override
 	public String registerCustomer(Customer customer) {
-		Integer cid = dao.save(customer).getCid();
+		Customer customer2 = dao.save(customer);
 		
-		
-		
+		Integer cid = customer2.getCid();	
 		return "Customer Registerd With ID : " + cid;
 	}
 

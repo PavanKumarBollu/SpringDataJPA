@@ -22,12 +22,15 @@ public class Application {
 		
 		 ICustomerMgmtService servieImpl = context.getBean(CustomerMgmtServieImpl.class);
 		
-		 Customer customer = new Customer(1, "pavan", "hyderabad", LocalDateTime.of(2001, 8, 23, 6, 15), LocalTime.of(10, 15), LocalDate.now());
+			/*
+			 * Customer customer = new Customer(1, "pavan", "hyderabad",
+			 * LocalDateTime.of(2001, 8, 23, 6, 15), LocalTime.of(10, 15), LocalDate.now());
+			 * 
+			 * String reg = servieImpl.registerCustomer(customer); System.out.println(reg);
+			 */
 		 
-		 String reg = servieImpl.registerCustomer(customer);
-		 System.out.println(reg);
 		 
-		 
+//		 	servieImpl.getAllCustomers().forEach(System.out::println);
 		 
 		 
 		 
