@@ -1,5 +1,7 @@
 package com.pavan.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -17,7 +19,14 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Autowired
 	private ICoronaVaccineRepo repo;
 
-	
+	@Override
+	public List<CoronaVaccine> searchVaccinesByGivenData(CoronaVaccine vaccine, boolean ascOrder,
+			String... properties) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+	
+	
 
 }
