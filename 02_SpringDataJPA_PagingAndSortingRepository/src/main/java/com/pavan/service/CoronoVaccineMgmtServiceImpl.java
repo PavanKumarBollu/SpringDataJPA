@@ -43,6 +43,12 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		Long totalPageCount = totalRows / pageSize;
 		
 		totalPageCount = totalRows % pageSize == 0 ? totalPageCount : ++totalPageCount;
+		
+		
+		for(int i =0 ; i< totalPageCount; i++)
+		{
+			Pageable page = PageRequest.of(i, pageSize);
+		}
 
 	}
 
