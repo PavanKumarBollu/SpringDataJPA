@@ -34,7 +34,9 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public void fetchDetailsByPagination(int pageSize) {
 		
+		// total table records count
 		
+		long totalRows = repo.count();
 
 	}
 
