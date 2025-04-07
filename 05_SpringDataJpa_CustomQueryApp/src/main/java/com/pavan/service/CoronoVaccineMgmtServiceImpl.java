@@ -16,39 +16,29 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Autowired
 	private ICoronaVaccineRepo repo;
 
+	
+
 	@Override
-	public List<CoronaVaccine> findByCompany(String company) {
+	public List<CoronaVaccine> fetchVaccineByCompany(String company) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<CoronaVaccine> findByCompanyEquals(String company) {
+	public List<CoronaVaccine> fetchVaccineByPricesLessThan(Double price) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<CoronaVaccine> findByCompanyIs(String company) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<CoronaVaccine> findByPriceLessThan(Double price) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public List<CoronaVaccine> findByCountryInAndPriceBetween(Collection<String> countries, double startRange,
+	public List<CoronaVaccine> searchVaccineByCountriesAndPriceRange(List<String> countires, double startRange,
 			double endRange) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<CoronaVaccine> findByCountryNotIn(Collection<String> countries) {
+	public List<CoronaVaccine> fetchVaccineNotByCountry(List<String> countries) {
 		// TODO Auto-generated method stub
 		return null;
 	}
