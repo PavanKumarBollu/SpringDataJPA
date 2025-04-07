@@ -28,10 +28,11 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		return all;
 	}
 
+	@SuppressWarnings("deprecation")
 	@Override
 	public CoronaVaccine getVaccineById(Long regNo) {
 
-		return repo.getReferenceById(regNo);
+		return repo.getById(regNo);
 	}
 
 	@Override
