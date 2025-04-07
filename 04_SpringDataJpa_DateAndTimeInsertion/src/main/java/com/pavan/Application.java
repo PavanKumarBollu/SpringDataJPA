@@ -1,5 +1,6 @@
 package com.pavan;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
@@ -23,7 +24,14 @@ public class Application {
 		
 		 Customer customer = new Customer(1, "pavan", "hyderabad", LocalDateTime.of(2001, 8, 23, 6, 15), LocalTime.of(10, 15), LocalDate.now());
 		 
-		 servieImpl.registerCustomer(customer);
+		 String reg = servieImpl.registerCustomer(customer);
+		 System.out.println(reg);
+		 
+		 
+		 
+		 
+		 
+		 
 		
 		((ConfigurableApplicationContext) context).close();
 	}
