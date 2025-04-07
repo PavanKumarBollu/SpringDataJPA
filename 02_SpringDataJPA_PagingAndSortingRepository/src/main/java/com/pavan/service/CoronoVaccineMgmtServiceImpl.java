@@ -37,6 +37,10 @@ public class CoronoVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 		// total table records count
 		
 		long totalRows = repo.count();
+		
+		// Setting up the total page count based on the number of records
+		
+		Long totalPageCount = totalRows / pageSize;
 
 	}
 
